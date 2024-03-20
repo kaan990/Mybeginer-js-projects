@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+        width: 100%;
+        height: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 500px;
+        height: 300px;
+        border: 2px solid black;
+    }
+    .model{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        flex-direction: column;
+        background-color: aliceblue;
+        width: 500px;
+        height: 300px;
+        z-index: 2;
+    }
+  </style>
+  <body>
+    <div class="main">
+        <h1>Model project</h1>
+        <button>Show Model</button>
+    </div>
+    <div class="model" style="display: none">
+        <h2>this is the model where i </h2>
+    <button class="close" style="height: 50px;">close</button>
+    </div>
+  </body>
+  <script >
+    const bg = document.querySelector('body');
+bg.style.backgroundImage = 'url("https://th.bing.com/th/id/OIP.ewRfMU-58Iustx-NiDinuAHaEo?rs=1&pid=ImgDetMain")';
+bg.style.backgroundSize = 'cover';
+
+var main = document.querySelector('.main');
+main.style.backgroundColor = 'rgb(255,255,255)';
+main.style.borderRadius = "10px";
+
+var model = document.querySelector(".model");
+var btn = document.querySelector("button");
+btn.addEventListener("click",function(){
+model.style.display = 'flex'
+})
+var close = document.querySelector('.close');
+close.addEventListener("click",function(){
+    model.style.display = 'none'
+    })
+  </script>
+</html>
