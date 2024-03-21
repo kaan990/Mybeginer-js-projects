@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: 500px;
+    }
+    img{
+        width: 150px;
+        height: 150px;
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+    #Review{
+        width: 50%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    button{
+        margin: 10px;
+        width: 90px;
+        height: 20px;
+    }
+    .container{
+        width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 0 12px 1px rgb(0, 0, 0);
+    }
+</style>
+<body>
+<div class="container">
+    <h2>Review</h2>
+    <div id="Aim">
+        <img id="Photo" src="https://wallpapercave.com/wp/wp4484071.jpg" alt="Image">
+    </div>
+    <div id="Authore" style="margin-top: 20px ;">Krishna Singh</div>
+    <div id="profesion" style="margin-top: 20px ;">Developer</div>
+    <div id="Review"style="margin-top: 20px ;">
+        This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews.
+    </div>
+    <div class="btn">
+        <button class="back"><</button>
+        <button class="next">></button>
+    </div>
+</div>
+</body>
+<script >
+    /*
+const object_detail = [
+    {
+        image : "https://www.trickscity.com/wp-content/uploads/2016/04/12356836_1666582430261394_7183559408635634317_o1-1020x1024.jpg",
+        Auther: "Krishna Singh",
+        Profesion:"Developer",
+        Review:" This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews."
+    },
+    {
+        image : "https://wallpapers.com/images/hd/cool-neon-blue-profile-picture-u9y9ydo971k9mdcf.jpgj",
+        Auther: "Chetan Soni",
+        Profesion:"Delivery boy",
+        Review:"     This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews."
+    },
+    {
+        image : "https://wallpapers.com/images/hd/cool-neon-blue-profile-picture-u9y9ydo971k9mdcf.jpg",
+        Auther: "Sajid khan",
+        Profesion:"Lula Bsdk",
+        Review:" This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews"
+    },
+    {
+        image : "https://i.pinimg.com/736x/da/fc/3a/dafc3addfd37737b93fa9ecce064f73d.jpg",
+        Auther: "Mukesh Ray",
+        Profesion:"Retain Manager",
+        Review:"This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews"
+    }
+];
+
+console.log(object_detail[0])
+
+var Photo = document.getElementById('Photo');
+var Authore = document.getElementById('Authore');
+var profesion = document.getElementById('profesion');
+var Review = document.getElementById("Review");
+
+// Assuming 'value' is already defined somewhere in your code
+var back = document.querySelector('.back');
+var next = document.querySelector('.next');
+var value = 0;
+
+back.addEventListener('click', function(){
+    if(value < 1){
+        value = 0;
+        console.log(value);
+    }else{
+        value -= 1;
+    }
+    review_file(value);
+    console.log(review_file(value));
+});
+
+next.addEventListener('click', function(){
+    if(value > object_detail.length - 1){
+        value = object_detail.length ;
+        console.log(value);
+    }else{
+        value += 1;
+    }
+    review_file(value);
+    console.log(review_file(value));
+});
+
+function review_file(value){
+Photo = object_detail[value].image;
+Authore = object_detail[value].Auther;
+profesion = object_detail[value].profesion;
+Review = object_detail[value].Review
+}
+*/
+
+const object_detail = [
+    {
+        image : "https://static.toiimg.com/thumb/msid-45174686,width-800,height-600,resizemode-75/45174686.jpg",
+        Auther: "Krishna Singh",
+        Profesion:"Developer",
+        Review:"This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews."
+    },
+    {
+        image : "https://i.pinimg.com/originals/57/76/3f/57763fdc5ab7d2d3c60f1b4b1ab3b5f5.jpg",
+        Auther: "Chetan Soni",
+        Profesion:"Delivery boy",
+        Review:"This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews."
+    },
+    {
+        image : "https://a10.gaanacdn.com/images/artists/41/1874841/crop_480x480_1874841.jpg",
+        Auther: "Sajid khan",
+        Profesion:"Lula Bsdk",
+        Review:"This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews"
+    },
+    {
+        image : "https://i.pinimg.com/originals/65/70/42/65704253602b47ebaafea5dd7fc6650c.png",
+        Auther: "Mukesh Ray",
+        Profesion:"Retain Manager",
+        Review:"This is a good feature to have on an ecommerce site to display customer reviews or a personal portfolio to display client reviews"
+    }
+];
+
+console.log(object_detail[0]);
+
+var Photo = document.getElementById('Photo');
+var Authore = document.getElementById('Authore');
+var profesion = document.getElementById('profesion');
+var Review = document.getElementById("Review");
+
+// Assuming 'value' is already defined somewhere in your code
+var back = document.querySelector('.back');
+var next = document.querySelector('.next');
+var value = 0;
+
+back.addEventListener('click', function(){
+    if(value > 0){
+        value -= 1;
+    }
+    review_file(value);
+});
+
+next.addEventListener('click', function(){
+    if(value < object_detail.length - 1){
+        value += 1;
+    }
+    review_file(value);
+});
+
+function review_file(value){
+    Photo.src = object_detail[value].image;
+    Authore.textContent = object_detail[value].Auther;
+    profesion.textContent = object_detail[value].Profesion;
+    Review.textContent = object_detail[value].Review;
+}
+
+
+</script>
+</html>

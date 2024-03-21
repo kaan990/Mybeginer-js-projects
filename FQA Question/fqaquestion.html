@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+     <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Bootstrap Icons CDN link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  </head>
+  <style>
+    *{
+      margin: 0px;
+    }
+    body{
+      top: 20px;
+      width: 100%;
+      height: 600px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+    .title{
+      font-size: 35px;
+      display: block;
+      width: 100%;
+    }
+    .block{
+      border: 2px solid black;
+      width: 50%;
+      padding: 20px;
+      position: relative;
+      border-radius: 5px;
+      margin: 10px;
+    }
+    .ques{
+      width: 60%;
+      margin-left: 10px;
+    }
+    button{
+      width: 50px;
+      height: 30px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background: none;
+      border: none;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .detail{
+      display: none;
+      margin-top: 15px;
+      text-align: left;
+      width: 90%;
+    }
+    .Minus{
+      display: none;
+    }
+    .displ{
+      display: none;
+    }
+    .displon{
+      display: flex;
+    }
+  </style>
+  <body>
+    <div class="title">
+      General FQA Questions
+    </div>
+    <!-- One question -->
+    <div class="block">
+      <div class="ques">
+        Do you Accept new bee 
+      </div>
+      <button class="Plus">
+        <i class="bi bi-bookmark-plus"></i>
+      </button>
+      <button class="Minus">
+        <i class="bi bi-dash-circle"></i>
+      </button>
+      <div class="detail">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, aliquam quia! Tempore cupiditate quo ullam repudiandae aliquam veritatis corporis, voluptatibus molestiae adipisci? Maxime at tempora laborum nobis dolores explicabo consequuntur!</p>
+      </div>
+    </div>
+    <!-- Second Question -->
+    <div class="block">
+      <div class="ques">
+        Do you Accept new bee 
+      </div>
+      <button class="Plus">
+        <i class="bi bi-bookmark-plus"></i>
+      </button>
+      <button class="Minus">
+        <i class="bi bi-dash-circle"></i>
+      </button>
+      <div class="detail">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, aliquam quia! Tempore cupiditate quo ullam repudiandae aliquam veritatis corporis, voluptatibus molestiae adipisci? Maxime at tempora laborum nobis dolores explicabo consequuntur!</p>
+      </div>
+    </div>
+    <!-- Third queston -->
+    <div class="block">
+      <div class="ques">
+        Do you Accept new bee 
+      </div>
+      <button class="Plus">
+        <i class="bi bi-bookmark-plus"></i>
+      </button>
+      <button class="Minus">
+        <i class="bi bi-dash-circle"></i>
+      </button>
+      <div class="detail">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, aliquam quia! Tempore cupiditate quo ullam repudiandae aliquam veritatis corporis, voluptatibus molestiae adipisci? Maxime at tempora laborum nobis dolores explicabo consequuntur!</p>
+      </div>
+    </div>
+        <!-- One question -->
+        <div class="block">
+          <div class="ques">
+            Do you Accept new bee 
+          </div>
+          <button class="Plus">
+            <i class="bi bi-bookmark-plus"></i>
+          </button>
+          <button class="Minus">
+            <i class="bi bi-dash-circle"></i>
+          </button>
+          <div class="detail">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, aliquam quia! Tempore cupiditate quo ullam repudiandae aliquam veritatis corporis, voluptatibus molestiae adipisci? Maxime at tempora laborum nobis dolores explicabo consequuntur!</p>
+          </div>
+        </div>
+        <!-- Second Question -->
+        <div class="block">
+          <div class="ques">
+            Do you Accept new bee 
+          </div>
+          <button class="Plus">
+            <i class="bi bi-bookmark-plus"></i>
+          </button>
+          <button class="Minus">
+            <i class="bi bi-dash-circle"></i>
+          </button>
+          <div class="detail">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, aliquam quia! Tempore cupiditate quo ullam repudiandae aliquam veritatis corporis, voluptatibus molestiae adipisci? Maxime at tempora laborum nobis dolores explicabo consequuntur!</p>
+          </div>
+        </div>
+        <!-- Third queston -->
+        <div class="block">
+          <div class="ques">
+            Do you Accept new bee 
+          </div>
+          <button class="Plus">
+            <i class="bi bi-bookmark-plus"></i>
+          </button>
+          <button class="Minus">
+            <i class="bi bi-dash-circle"></i>
+          </button>
+          <div class="detail">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, aliquam quia! Tempore cupiditate quo ullam repudiandae aliquam veritatis corporis, voluptatibus molestiae adipisci? Maxime at tempora laborum nobis dolores explicabo consequuntur!</p>
+          </div>
+        </div>
+  </body>
+  <script >
+      var plusButtons = document.querySelectorAll(".Plus");
+  var minusButtons = document.querySelectorAll(".Minus");
+  var ans = document.querySelectorAll('.detail');
+  
+  plusButtons.forEach(function(plus, index) {
+    plus.addEventListener('click', function() {
+      ans[index].classList.add('displon');
+      plus.classList.add('displ');
+      minusButtons[index].classList.add('displon');
+    });
+  });
+
+  minusButtons.forEach(function(minus, index) {
+    minus.addEventListener('click', function() {
+      ans[index].classList.remove('displon');
+      plusButtons[index].classList.remove('displ');
+      minus.classList.remove('displon');
+    });
+  });
+  </script>
+</html>

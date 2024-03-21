@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    *{
+        margin: 0;
+    }
+    img {
+      width: 150px;
+    }
+    .container {
+      width: 100%;
+      height: 80px;
+    }
+    .mid,
+    div,
+    ul,
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 10px;
+      align-items: center;
+    }
+    .mid {
+      width: 60%;
+      right: 2px;
+    }
+    .user {
+      display: none;
+      border: none;
+      background-color: unset;
+    }
+    .user i {
+      font-size: 46px;
+      align-items: center;
+    }
+    @media screen and (max-width: 546px) {
+      .mid,
+      div,
+      ul,
+      li {
+        display: block;
+        margin: 10px;
+        font-size: medium;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: 700;
+        margin-left: 10px;
+      }
+      .user {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 2px;
+      }
+      .container {
+        width: 50%;
+        position: relative;
+    transform: translateX(-18em);
+        height: 400px;
+        overflow: hidden;
+        border: 2px solid black;
+        background-color: rgb(0, 0, 0,0.1);
+        border-radius: 0px 10px 10px 0px;
+      }
+      .sideshow{
+        transform: translateX(1em);
+      }
+      .mid ul li{
+        font-size:25px;
+        margin-left: 2px;
+      }
+    }
+  </style>
+  <body>
+    <nav>
+      <!-- logo  side -->
+      <div class="container">
+        <div class="logo">
+          <img
+            src="https://th.bing.com/th/id/R.8c021bcbe06ce652c9aee1ddafb95c43?rik=kGzcH8CtvMWFiw&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2017%2f05%2fPepsi-Logo.png&ehk=KIPePmsTtNZue8xRqKplJFDNocU8FHCzuer%2fGJorybk%3d&risl=&pid=ImgRaw&r=0"
+            alt=""
+          />
+        </div>
+        <!--nav section  -->
+        <div class="mid">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>About</li>
+            <li>Pages</li>
+          </ul>
+        </div>
+      </div>
+      <button class="user" style="width: 90px">
+        <i class="bi bi-list"></i>
+      </button>
+    </nav>
+  </body>
+  <script >
+    var container = document.querySelector('.container');
+
+var userbtn = document.querySelector('.user');
+
+console.log(container);
+
+var sideshow = 0 ;
+userbtn.addEventListener('click',function(){
+    if(sideshow == 0){
+        container.classList.add('sideshow');
+        sideshow +=1;
+        console.log(        container.classList.add('sideshow'));
+    }else if(sideshow == 1){
+        container.classList.remove('sideshow');
+        sideshow = 0;
+        console.log(        container.classList.remove('sideshow'));
+    }
+})
+
+  </script>
+</html>
